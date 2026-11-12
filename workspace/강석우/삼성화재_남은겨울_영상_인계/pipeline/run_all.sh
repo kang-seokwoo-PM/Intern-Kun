@@ -7,7 +7,7 @@ cd "$(dirname "$0")"
 HTML="$1"; shift
 [ -f fonts/Pretendard-Bold.woff2 ] || sh get_fonts.sh
 [ -f assets/event_logo.png ] || node make_logo_placeholder.js
-python3 prep_v5.py "$HTML"
-python3 build_v5.py "$HTML"
-node render_v5.js | tee work/render_v5.log
-python3 assemble_v5.py "$@"
+python3 prep_v6.py "$HTML"
+python3 build_v6.py "$HTML"
+node render_v6.js | tee work/render_v6.log
+python3 assemble_v6.py "$@"

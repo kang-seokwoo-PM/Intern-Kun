@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-# prep_v5.py <landing.html>
+# prep_v6.py <landing.html>
 # Pulls the three illustrations + the bridge video out of the landing HTML (they are embedded as base64)
 # and builds the working plates the page uses. Everything lands in work/ (not committed; regenerate any time).
 # High-res swap: put replacements in assets/hires/ (intro.png|jpg, closing.png|jpg, bridge.mp4) and re-run.
@@ -24,7 +24,7 @@ def pick(name, exts):
 def fit(path, size, label):
     im = Image.open(path).convert('RGB'); w, h = im.size
     if abs(w / h - size[0] / size[1]) > 0.01:
-        print('WARNING: %s is %dx%d, a different shape from the original (%.3f vs %.3f). It will be centre-cropped; check the framing numbers in render_v5.js.' % (label, w, h, w / h, size[0] / size[1]))
+        print('WARNING: %s is %dx%d, a different shape from the original (%.3f vs %.3f). It will be centre-cropped; check the framing numbers in render_v6.js.' % (label, w, h, w / h, size[0] / size[1]))
         k = max(size[0] / w, size[1] / h); im = im.resize((round(w * k), round(h * k)), Image.LANCZOS)
         l = (im.size[0] - size[0]) // 2; t = (im.size[1] - size[1]) // 2; return im.crop((l, t, l + size[0], t + size[1]))
     print('%s: source %dx%d -> working %dx%d (%s)' % (label, w, h, size[0], size[1], 'UPSCALED, soft' if w < size[0] else 'downscaled, sharp'))

@@ -6,3 +6,6 @@ node_modules/
 package-lock.json
 # high-res originals from the client stay local (rules/03)
 assets/hires/
+# instrument samples / soundfonts are downloaded, never committed (large; see SOUNDS.md)
+samples/
+*.sf2

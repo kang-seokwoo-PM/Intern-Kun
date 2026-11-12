@@ -1,0 +1,636 @@
+{
+  "title": "삼성화재 다이렉트 — 남은 겨울 16:9 영상",
+  "version": "v6 (저장소 파일명 v5_)",
+  "file": "workspace/강석우/v5_삼성화재_남은겨울_16x9.mp4",
+  "supersedes": "v1_timeline.json (v5)",
+  "fps": 30,
+  "resolution": {
+    "width": 1920,
+    "height": 1080
+  },
+  "total_duration": 32.57,
+  "total_frames": 977,
+  "video": "H.264 High, yuv420p, +faststart, crf 18",
+  "audio": "AAC 192k, 48kHz stereo, -16.0 LUFS, 최고 -2.3 dBFS (ffmpeg 측정)",
+  "units": "시간은 영상 기준 초. copy의 source.line은 랜딩 v8 HTML의 줄 번호, selector는 그 요소. \" / \"는 화면에서의 줄바꿈",
+  "source_html": "랜딩 v8 HTML (저장소에 없음 — 받아야 할 것)",
+  "copy_arc": "믿음(01) → 물음(01) → 내 짐작(03) → 현실(05: 16번) → 결론(05 끝, 한 번만) → 사실(06) → 행동(07) → 맺음(08)",
+  "data_status": "16번과 2.2개(및 3명 중 1명) 수치는 팀장이 확인을 마침 (출처: v6 작업 지시로 전달받음)",
+  "overlays": [
+    {
+      "id": "snow",
+      "description": "영상 전체에 한 번에 이어지는 눈(프레임 0부터, 장면이 바뀌어도 끊기지 않음). 230송이, 화면 합성(screen) 95%",
+      "made_by": "pipeline/snow_v6.py"
+    }
+  ],
+  "scene_files": {
+    "note": "render_v6.js는 5개 장면으로 찍고 assemble_v6.py가 겹쳐 잇는다. 아래 cuts는 보는 사람 기준으로 8개로 나눈 것",
+    "scenes": [
+      {
+        "name": "1_intro",
+        "start": 0.0
+      },
+      {
+        "name": "2_input",
+        "start": 5.5
+      },
+      {
+        "name": "3_bridge",
+        "start": 13.0
+      },
+      {
+        "name": "4_fact",
+        "start": 21.7333
+      },
+      {
+        "name": "5_closing",
+        "start": 25.7333
+      }
+    ],
+    "crossfades": [
+      0.3,
+      0.4,
+      0.4,
+      0.5
+    ],
+    "final_fade": 0.6
+  },
+  "marks": {
+    "cta0": 3.85,
+    "press0": 5.3,
+    "ages": 5.5,
+    "question": 7.35,
+    "guess_pick": 12.4,
+    "breath0": 13.2,
+    "reveal": 14.25,
+    "num": 14.8,
+    "land": 16.1,
+    "lbl": 17.37,
+    "sub": 18.27,
+    "msg": 19.87,
+    "fact": 21.833,
+    "fact_hit": 22.483,
+    "pulse1": 24.083,
+    "pulse2": 24.423,
+    "closing": 25.833,
+    "press": 28.533,
+    "release": 28.753,
+    "endcard": 28.873,
+    "logo": 29.953,
+    "fade_out": 30.967
+  },
+  "cuts": [
+    {
+      "id": "01_cold_open",
+      "arc": "믿음 → 물음",
+      "start": 0.0,
+      "end": 5.5,
+      "purpose": "제목 없이 글로 시작. \"늘 그 자리에 계실 것 같다\"는 믿음을 쉼표에서 멈춰 두고, 얼마나 남았는지 묻고, 버튼을 눌러 세어 보러 간다. 결론은 여기서 말하지 않는다",
+      "copy": [
+        {
+          "text": "짜증을 내도, 투정을 부려도",
+          "source": {
+            "line": 268,
+            "selector": "h1.st-b (1번째 줄)"
+          }
+        },
+        {
+          "text": "늘 다 받아 주시던 우리 부모님.",
+          "source": {
+            "line": 268,
+            "selector": "h1.st-b (2번째 줄)"
+          }
+        },
+        {
+          "text": "언제까지나 그 자리에 계실 것 같지만,",
+          "source": {
+            "line": 268,
+            "selector": "h1.st-b (3번째 줄)"
+          },
+          "note": "크게. 쉼표에서 멈춤. 4번째 줄(결론)은 쓰지 않음"
+        },
+        {
+          "text": "부모님과 함께할 겨울이 얼마나 남았는지 / 궁금하지 않으신가요?",
+          "source": {
+            "line": 269,
+            "selector": "p.st-q"
+          }
+        },
+        {
+          "text": "함께할 수 있는 겨울 세어 보기",
+          "source": {
+            "line": 270,
+            "selector": ".st-foot button.cta[data-go=s-input]"
+          },
+          "note": "버튼. 3.85초에 뜨고 5.30초에 포인터가 누름"
+        },
+        {
+          "text": "삼성화재 다이렉트",
+          "source": {
+            "line": 265,
+            "selector": "#s-intro .bar .brand"
+          },
+          "note": "화면 왼쪽 위 작은 글자"
+        },
+        {
+          "text": "남은 겨울 계산기",
+          "source": {
+            "line": 265,
+            "selector": "#s-intro .bar .meta"
+          },
+          "note": "화면 오른쪽 위 작은 글자"
+        }
+      ],
+      "background_asset": "intro_illustration",
+      "camera": "두 사람 쪽으로 아주 천천히 다가감 (장면 01–03에 걸쳐 1.60배 → 1.736배, 한 번에 이어짐). 배경은 살짝 흐리고 어둡게",
+      "text_motion": "한 줄씩 0.6초 동안 떠오름(흐림 → 또렷). 시작 시점 0.2 / 0.65 / 1.6 / 2.75 / 2.95초. 물음이 뜰 때 앞의 두 줄은 60%로 흐려짐. 버튼 3.85초 → 포인터가 미끄러져 와 5.30초에 가볍게 누름(0.972배, 14% 어둡게, 작은 물결) → 0.2초 뒤 뗌",
+      "transition_in": "없음 (첫 장부터 눈이 내리는 화면)",
+      "transition_out": "버튼을 뗀 순간부터 0.3초 겹쳐 넘기기 (누름이 다음 장면을 엶)",
+      "audio_cue": "부드러운 피아노 A단조 + 아주 작은 현악, 0.04초부터"
+    },
+    {
+      "id": "02_ages",
+      "arc": "(입력)",
+      "start": 5.5,
+      "end": 7.35,
+      "purpose": "계산기에 나이를 넣는 모습",
+      "copy": [
+        {
+          "text": "내 나이",
+          "source": {
+            "line": 282,
+            "selector": "label[for=me]"
+          }
+        },
+        {
+          "text": "48",
+          "source": {
+            "line": 422,
+            "selector": "input#me"
+          },
+          "note": "영상에서 입력한 값. 랜딩 기본값과 같음(422줄 S 초기값)"
+        },
+        {
+          "text": "어머니 나이",
+          "source": {
+            "line": 285,
+            "selector": "label[for=mom]"
+          }
+        },
+        {
+          "text": "74",
+          "source": {
+            "line": 422,
+            "selector": "input#mom"
+          },
+          "note": "영상에서 입력한 값. 랜딩 기본값과 같음"
+        },
+        {
+          "text": "삼성화재 다이렉트",
+          "source": {
+            "line": 265,
+            "selector": "#s-intro .bar .brand"
+          },
+          "note": "화면 왼쪽 위 작은 글자"
+        },
+        {
+          "text": "남은 겨울 계산기",
+          "source": {
+            "line": 265,
+            "selector": "#s-intro .bar .meta"
+          },
+          "note": "화면 오른쪽 위 작은 글자"
+        }
+      ],
+      "background_asset": "intro_illustration",
+      "camera": "장면 01에서 이어지는 느린 다가감",
+      "text_motion": "흰 카드가 0.45초 동안 떠오름. 숫자는 한 글자씩 입력됨",
+      "transition_in": "0.3초 겹쳐 넘기기",
+      "transition_out": "카드가 0.32초 동안 위로 사라지며 질문으로 바뀜 (같은 장면 안)",
+      "audio_cue": "피아노 이어짐"
+    },
+    {
+      "id": "03_question",
+      "arc": "내 짐작",
+      "start": 7.35,
+      "end": 13.0,
+      "purpose": "보는 사람도 스스로 답을 떠올리게 하는 질문. 망설이다 20년쯤을 고름",
+      "copy": [
+        {
+          "text": "먼저 맞혀 보세요",
+          "source": {
+            "line": 294,
+            "selector": ".guess .fl"
+          }
+        },
+        {
+          "text": "부모님과 함께할 시간, / 몇 년쯤 남았을까요?",
+          "source": {
+            "line": 295,
+            "selector": ".guess p.caption"
+          },
+          "note": "쉼표 뒤에서 줄바꿈"
+        },
+        {
+          "text": "5년쯤",
+          "source": {
+            "line": 297,
+            "selector": "#guess .sg[data-v=5]"
+          }
+        },
+        {
+          "text": "10년쯤",
+          "source": {
+            "line": 298,
+            "selector": "#guess .sg[data-v=10]"
+          }
+        },
+        {
+          "text": "20년쯤",
+          "source": {
+            "line": 299,
+            "selector": "#guess .sg[data-v=20]"
+          },
+          "note": "선택됨 (12.40초)"
+        },
+        {
+          "text": "30년 넘게",
+          "source": {
+            "line": 300,
+            "selector": "#guess .sg[data-v=30]"
+          }
+        },
+        {
+          "text": "세어 보기",
+          "source": {
+            "line": 306,
+            "selector": "#countBtn"
+          }
+        },
+        {
+          "text": "삼성화재 다이렉트",
+          "source": {
+            "line": 265,
+            "selector": "#s-intro .bar .brand"
+          },
+          "note": "화면 왼쪽 위 작은 글자"
+        },
+        {
+          "text": "남은 겨울 계산기",
+          "source": {
+            "line": 265,
+            "selector": "#s-intro .bar .meta"
+          },
+          "note": "화면 오른쪽 위 작은 글자"
+        }
+      ],
+      "background_asset": "intro_illustration",
+      "camera": "장면 01에서 이어지는 느린 다가감",
+      "text_motion": "질문이 한 줄씩 떠오르고 선택지 4개가 차례로 나옴. 포인터가 10년쯤에서 멈칫 → 30년 넘게를 누를 뻔 → 물러남 → 20년쯤 선택. 끝에 \"세어 보기\" 버튼이 눌린 모습",
+      "transition_in": "같은 장면 안에서 바뀜",
+      "transition_out": "0.4초 겹쳐 넘기기",
+      "audio_cue": "피아노 이어짐, 끝에서 풀리지 않은 채로 멈춤"
+    },
+    {
+      "id": "04_breath",
+      "arc": "(쉼)",
+      "start": 13.0,
+      "end": 14.25,
+      "purpose": "답이 나오기 직전의 고요",
+      "copy": [],
+      "background_asset": "bridge_video",
+      "camera": "거의 고정. 영상을 어둡게(밝기 0.5)",
+      "text_motion": "글자 없음. 눈만 내림",
+      "transition_in": "0.4초 겹쳐 넘기기",
+      "transition_out": "그대로 이어짐",
+      "audio_cue": "거의 무음 (13.20초부터 가라앉음, 약 -60dB)"
+    },
+    {
+      "id": "05_the_16",
+      "arc": "현실 → 결론",
+      "start": 14.25,
+      "end": 21.73,
+      "purpose": "남은 겨울 16번. 꾸미지 않고 고요하게 보여 준 뒤, 결론을 여기서 한 번만 말한다",
+      "copy": [
+        {
+          "text": "남은 겨울을 세어 봤어요",
+          "source": {
+            "line": 314,
+            "selector": "p.b1"
+          },
+          "note": "14.25초"
+        },
+        {
+          "text": "16",
+          "source": {
+            "line": 315,
+            "selector": "#bNum"
+          },
+          "note": "14.80초부터 16.10초까지 조용히 또렷해짐. 랜딩 계산식의 결과(어머니 74세, 404–420줄)"
+        },
+        {
+          "text": "번",
+          "source": {
+            "line": 315,
+            "selector": ".b-num .u"
+          }
+        },
+        {
+          "text": "어머니와 함께 보낼 겨울",
+          "source": {
+            "line": 558,
+            "selector": "#bLbl"
+          },
+          "note": "17.37초. 랜딩 코드가 만드는 문장: `${m.who}와 함께 보낼 겨울`"
+        },
+        {
+          "text": "생각하신 것보다 조금 짧은 약 16년이에요",
+          "source": {
+            "line": 556,
+            "selector": "#bSub"
+          },
+          "note": "18.27초. 내 짐작(20년쯤)에 대한 답. 결론이 나올 때 사라짐"
+        },
+        {
+          "text": "생각보다, 부모님과 함께할 시간은 / 많지 않을 수 있어요.",
+          "source": {
+            "line": 319,
+            "selector": "p.b-msg"
+          },
+          "note": "19.87초. 결론 — 영상 전체에서 여기 한 번만. 윗줄이 있던 자리에 뜸"
+        }
+      ],
+      "background_asset": "bridge_video",
+      "camera": "장면 전체(숨 고르기 포함)에 걸쳐 1.0 → 1.022배로 거의 느껴지지 않게 다가감. 번쩍임·흔들림·펀치 없음. 배경은 2.6초에 걸쳐 조금 밝아지고 흐려짐",
+      "text_motion": "머리말이 뜸 → 16번이 1.3초 동안 천천히 나타남(투명 → 선명, 흐림 5px → 0, 크기 변화 없음) → 작은 점 16개가 0.07초 간격으로 조용히 켜짐 → 아랫줄이 0.9초씩 천천히 뜸 → 짐작에 대한 답 줄이 사라지고 같은 자리에 결론",
+      "transition_in": "숨 고르기에서 그대로 이어짐",
+      "transition_out": "0.4초 겹쳐 넘기기",
+      "audio_cue": "큰 화음 없음. 15.25초쯤 부드러운 피아노 한 음(A4)만 울리고 고요 → 17.37초부터 아주 여린 F 화음과 현악이 천천히 돌아옴 → 19.87초 결론에서 여린 G 화음"
+    },
+    {
+      "id": "06_the_2.2",
+      "arc": "(사실)",
+      "start": 21.73,
+      "end": 25.73,
+      "purpose": "부모님 건강 사실 한 가지. 16번보다 세지 않게",
+      "copy": [
+        {
+          "text": "65세 이상 부모님들은 평균",
+          "source": {
+            "line": 320,
+            "selector": ".b-fact b"
+          },
+          "note": "한 문장을 숫자 앞뒤로 나눠 한 줄에 배치"
+        },
+        {
+          "text": "2.2개",
+          "source": {
+            "line": 320,
+            "selector": ".b-fact b"
+          },
+          "note": "아주 크게"
+        },
+        {
+          "text": "의 만성질환을 갖고 계세요.",
+          "source": {
+            "line": 320,
+            "selector": ".b-fact b"
+          }
+        },
+        {
+          "text": "3개 이상인 분도 3명 중 1명이 넘어요.",
+          "source": {
+            "line": 320,
+            "selector": ".b-fact b (br 뒤)"
+          }
+        },
+        {
+          "text": "보건복지부·한국보건사회연구원, 2023 노인실태조사",
+          "source": {
+            "line": 320,
+            "selector": ".b-fact small"
+          },
+          "note": "출처 표기"
+        }
+      ],
+      "background_asset": "bridge_video",
+      "camera": "고정(밝기 0.66, 살짝 흐림). 심장 박동 뒤에는 완전히 멈춤",
+      "text_motion": "2.2개가 1.22배·옅은 흐림에서 0.55초 동안 부드럽게 다가와 22.48초에 자리 잡음(흔들림·번쩍임 없음) → 앞뒤 문장 → 둘째 문장 → 출처가 차례로 뜸 → 심장 박동 두 번: 24.08초(5% 커짐), 24.42초(4% 커짐) → 멈춤",
+      "transition_in": "0.4초 겹쳐 넘기기",
+      "transition_out": "0.5초 겹쳐 넘기기",
+      "audio_cue": "22.48초: 여린 낮은 A 음. 24.08초·24.42초: 낮고 부드러운 심장 소리 두 번(펠트를 댄 듯 깎은 낮은 피아노 음), 그때 음악이 살짝 작아짐"
+    },
+    {
+      "id": "07_closing_cta",
+      "arc": "(행동)",
+      "start": 25.73,
+      "end": 28.87,
+      "purpose": "따뜻한 마무리와 행동 권유. 버튼을 누르는 모습",
+      "copy": [
+        {
+          "text": "지금부터 알아 가면 돼요. / 건강보험부터 / 함께 점검해 봐요.",
+          "source": {
+            "line": 495,
+            "selector": "#closeHead"
+          },
+          "note": "랜딩 코드가 넣는 문장(372줄에도 같은 기본 문장)"
+        },
+        {
+          "text": "내 건강보험 점검 신청하기",
+          "source": {
+            "line": 397,
+            "selector": "#listBtn"
+          }
+        },
+        {
+          "text": "삼성화재 다이렉트",
+          "source": {
+            "line": 335,
+            "selector": "#s-check .hd-brand"
+          },
+          "note": "화면 왼쪽 위 작은 글자"
+        }
+      ],
+      "background_asset": "closing_illustration",
+      "camera": "아주 천천히 다가감(1.0 → 약 1.03배). 따뜻한 빛이 점점 짙어짐",
+      "text_motion": "제목 세 줄이 한 줄씩 떠오름 → 버튼이 뜸 → 포인터가 버튼 오른쪽으로 미끄러져 옴 → 28.53초에 누름(버튼 0.96배, 20% 어둡게, 물결과 고리가 퍼짐) → 28.75초에 뗌",
+      "transition_in": "0.5초 겹쳐 넘기기",
+      "transition_out": "버튼을 뗀 직후(28.87초) 0.7초 동안 로고 장면으로 겹쳐 넘어감",
+      "audio_cue": "C장조로 밝아짐 — 음악이 가장 풍성한 곳. 누르는 소리는 없음",
+      "note": "버튼은 누르는 모습만 그린 것. 실제 클릭·신청서 입력·제출은 하지 않음"
+    },
+    {
+      "id": "08_endcard_logo",
+      "arc": "(맺음)",
+      "start": 28.87,
+      "end": 32.57,
+      "purpose": "행사 로고로 끝맺음",
+      "copy": [
+        {
+          "text": "우리가 함께할 겨울",
+          "source": {
+            "line": null,
+            "selector": "assets/event_logo.png"
+          },
+          "note": "로고 그림 파일(지금은 임시 글자). 랜딩 글자가 아니라 인트로 그림(207줄) 안에 그려진 제목을 옮긴 것"
+        },
+        {
+          "text": "삼성화재 다이렉트",
+          "source": {
+            "line": 265,
+            "selector": "#s-intro .bar .brand"
+          },
+          "note": "로고 아래 작은 글자. 공식 CI 그림 아님 [확인 필요]"
+        }
+      ],
+      "background_asset": "closing_illustration",
+      "camera": "불 켜진 나무를 비춤. 아주 천천히 다가감(1.0 → 1.035배)",
+      "text_motion": "로고가 0.7초 동안 떠오름(29.95초에 다 나옴) → 브랜드 글자가 뒤따라 뜸 → 약 2초 그대로 → 마지막 0.6초 동안 화면이 어두워짐",
+      "transition_in": "버튼을 뗀 직후 0.7초 겹쳐 넘기기",
+      "transition_out": "0.6초 동안 검게 사라짐",
+      "audio_cue": "29.95초: 마지막 C 화음이 로고와 함께 울림. 30.97초부터 소리가 작아짐"
+    }
+  ],
+  "music": {
+    "made_by": "pipeline/music_v6.py",
+    "score": "pipeline/out/audio/score_v6.mid (돌리면 생김)",
+    "piano": "Salamander Grand Piano V3 — Alexander Holm, CC BY 3.0, 48kHz/24bit FLAC 샘플 (github.com/sfzinstruments/SalamanderGrandPiano). music_v6.py 안의 샘플러로 연주",
+    "strings": "FluidR3_GM.sf2 — Frank Wen, MIT (패키지 fluid-soundfont-gm 3.1-5.3). String Ensemble 1 + Cello, FluidSynth 2.3.4로 연주",
+    "heartbeat": "Salamander 피아노의 낮은 음 A0+A1을 여리게 치고 150Hz 아래 위주로 깎은 소리 (합성음 아님)",
+    "processing": "피아노 고음 부드럽게 깎기(3.4kHz) → 잔향(합성 임펄스 컨볼루션 2.8초) → 가벼운 압축(2.5:1) → -16 LUFS 맞춤, 미리보기 리미터로 최고 -2.2 dBFS 이하",
+    "section_levels_db": {
+      "opening": -17.2,
+      "breath": -60.6,
+      "the_16_alone": -29.3,
+      "the_16_label_and_conclusion": -19.7,
+      "the_2_2": -20.7,
+      "closing_and_logo": -17.1
+    },
+    "license_note": "pipeline/SOUNDS.md"
+  },
+  "assets": {
+    "intro_illustration": {
+      "path": "pipeline/assets/hires/intro.png (또는 .jpg) — 없으면 랜딩 HTML 207줄의 그림을 꺼내 씀",
+      "current_resolution": "474x843",
+      "recommended_resolution": "2000x3557 이상 (가로 2000px 이상, 같은 비율)",
+      "replaceable": true,
+      "used_in": [
+        "01_cold_open",
+        "02_ages",
+        "03_question"
+      ]
+    },
+    "closing_illustration": {
+      "path": "pipeline/assets/hires/closing.png (또는 .jpg) — 없으면 랜딩 HTML 246줄의 그림을 꺼내 씀",
+      "current_resolution": "800x1235",
+      "recommended_resolution": "2000x3088 이상 (가로 2000px 이상, 같은 비율)",
+      "replaceable": true,
+      "used_in": [
+        "07_closing_cta",
+        "08_endcard_logo"
+      ]
+    },
+    "bridge_video": {
+      "path": "pipeline/assets/hires/bridge.mp4 — 없으면 랜딩 HTML 640줄의 영상을 꺼내 씀",
+      "current_resolution": "720x1280, 30fps, 11.03초(331프레임)",
+      "recommended_resolution": "1920px 이상 가로, 세로형, 30fps, 11초 이상",
+      "replaceable": true,
+      "used_in": [
+        "04_breath",
+        "05_the_16",
+        "06_the_2.2"
+      ]
+    },
+    "event_logo": {
+      "path": "pipeline/assets/event_logo.png",
+      "current_resolution": "1942x426 (임시: Pretendard 글자, 투명 PNG)",
+      "recommended_resolution": "가로 2400px 이상 또는 세로 1000px 이상, 투명 PNG",
+      "replaceable": true,
+      "used_in": [
+        "08_endcard_logo"
+      ],
+      "display_box_px": "최대 1152x456 (영상 픽셀), 비율 유지"
+    },
+    "music": {
+      "path": "pipeline/out/audio/music_bed.wav (music_v6.py가 만듦, 저장소에 없음)",
+      "current_resolution": "샘플 연주(Salamander 피아노 + FluidR3 현악), 48kHz 스테레오",
+      "recommended_resolution": "그대로 써도 됨. 바꾸려면 wav/mp3 33초 이상, 사용 허락 확인",
+      "replaceable": true,
+      "how": "python3 assemble_v6.py --music 파일"
+    },
+    "heartbeat_sfx": {
+      "path": "pipeline/out/audio/heartbeat_sfx.wav (music_v6.py가 만듦, 저장소에 없음)",
+      "current_resolution": "낮은 피아노 샘플 2번, 48kHz",
+      "recommended_resolution": "그대로 써도 됨",
+      "replaceable": true,
+      "used_in": [
+        "06_the_2.2"
+      ]
+    },
+    "piano_samples": {
+      "path": "pipeline/samples/salamander/*.flac (music_v6.py가 처음 돌 때 받음, 저장소에 없음)",
+      "current_resolution": "48kHz/24bit, 약 30개 약 50MB",
+      "recommended_resolution": "그대로",
+      "replaceable": false,
+      "license": "CC BY 3.0 — 출처 표시 필요 (SOUNDS.md)"
+    },
+    "strings_soundfont": {
+      "path": "/usr/share/sounds/sf2/FluidR3_GM.sf2 (apt install fluid-soundfont-gm) 또는 pipeline/samples/FluidR3_GM.sf2",
+      "current_resolution": "약 148MB",
+      "recommended_resolution": "그대로",
+      "replaceable": false,
+      "license": "MIT"
+    },
+    "font": {
+      "path": "pipeline/fonts/Pretendard-*.woff2 (get_fonts.sh가 받음, 저장소에 없음)",
+      "current_resolution": "Pretendard 1.3.9, 굵기 300–900",
+      "recommended_resolution": "그대로",
+      "replaceable": false,
+      "license": "SIL OFL 1.1"
+    },
+    "landing_html": {
+      "path": "저장소에 없음 (rules/03) — 팀장에게 받아 스크립트에 경로로 넘김",
+      "current_resolution": "v8, 약 3.1MB",
+      "recommended_resolution": "그대로",
+      "replaceable": false
+    }
+  },
+  "todo": [
+    {
+      "order": 1,
+      "task": "큰 원본 그림(첫 장면·마무리)과 배경 영상으로 교체",
+      "how": "pipeline/assets/hires/ 에 넣고 run_all.sh 다시 실행",
+      "status": "대기 — 원본을 받아야 함"
+    },
+    {
+      "order": 2,
+      "task": "진짜 행사 로고로 교체",
+      "how": "pipeline/assets/event_logo.png 덮어쓰기 후 다시 실행",
+      "status": "대기 — 로고를 받아야 함"
+    },
+    {
+      "order": 3,
+      "task": "음악·심장 소리를 사람 귀로(가능하면 발표장 스피커로) 확인. 마음에 안 들면 완성된 음악으로 교체",
+      "how": "직접 듣기 / python3 assemble_v6.py --music 파일",
+      "status": "미확인 — 아직 아무도 들어 보지 않음"
+    },
+    {
+      "order": 4,
+      "task": "[확인 필요] Salamander 피아노(CC BY 3.0) 출처 표시를 어디에 적을지",
+      "how": "SOUNDS.md의 문구를 자막·설명란·제출 문서 중 한 곳에",
+      "status": "팀장 결정 필요"
+    },
+    {
+      "order": 5,
+      "task": "[확인 필요] 마지막 장면의 \"삼성화재 다이렉트\"를 공식 CI 그림으로 바꿔야 하는지",
+      "how": "광고주 확인",
+      "status": "미확인"
+    },
+    {
+      "order": 6,
+      "task": "16번·2.2개 수치 확인",
+      "how": "—",
+      "status": "완료 — 팀장이 확인을 마침 (v6 작업 지시로 전달받음)"
+    }
+  ]
+}

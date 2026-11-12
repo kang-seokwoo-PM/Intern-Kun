@@ -1,4 +1,4 @@
-# snow_v5.py <seconds>  -> raw 1920x1080 gray frames on stdout (piped into ffmpeg by assemble_v5.py)
+# snow_v6.py <seconds>  -> raw 1920x1080 gray frames on stdout (piped into ffmpeg by assemble_v6.py)
 # One continuous snowfall for the whole film, screen-blended over all cuts so it never jumps at a cut. Same seed = same snow every time.
 import numpy as np, sys
 W,H,FPS=1920,1080,30; n=int(float(sys.argv[1])*FPS); rng=np.random.default_rng(11)

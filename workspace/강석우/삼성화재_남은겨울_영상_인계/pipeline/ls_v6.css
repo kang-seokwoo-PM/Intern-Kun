@@ -5,7 +5,7 @@
 @font-face{font-family:Pretendard;font-weight:800;src:url(../fonts/Pretendard-ExtraBold.woff2)}
 @font-face{font-family:Pretendard;font-weight:900;src:url(../fonts/Pretendard-Black.woff2)}
 @font-face{font-family:Pretendard;font-weight:300;src:url(../fonts/Pretendard-Light.woff2)}
-/* ===== 16:9 film styles, v5. Injected into the landing page by build_v5.py. Page px x2.4 = output px (800x450 -> 1920x1080). ===== */
+/* ===== 16:9 film styles, v6. Injected into the landing page by build_v6.py. Page px x2.4 = output px (800x450 -> 1920x1080). ===== */
 html{overflow:hidden;background:#101a33}body{overflow:hidden;background:transparent}
 .app{max-width:none;width:100vw;height:100vh;min-height:0;overflow:hidden;background:transparent;box-shadow:none!important;position:relative;z-index:1}
 .scr{min-height:0;height:100vh;transform-origin:var(--ox,50%) var(--oy,50%);transform:scale(var(--s,1))}
@@ -23,11 +23,21 @@ html{overflow:hidden;background:#101a33}body{overflow:hidden;background:transpar
 .intro .bar{height:60px;padding:0 44px}
 .intro .brand,#s-input .hd-brand,#s-check .hd-brand{font-size:13.5px!important;font-weight:600!important;letter-spacing:.02em;color:#fff;opacity:.92}
 .intro .meta{font-size:12.5px;letter-spacing:.02em;color:rgba(255,255,255,.78)}
-.intro .st-foot{display:none}
+/* intro CTA (the landing's own button): appears under the copy, gets pressed, and that press leads into the ages */
+.intro .spacer{display:none}
+.intro .st-foot{position:absolute;left:44px;top:322px;width:300px;padding:0;margin:0;z-index:3}
+.intro .st-foot .st-b,.intro .st-foot .st-q{display:none}
+.intro .st-foot .cta{position:relative;overflow:hidden;margin:0;height:52px;font-size:16px;animation:lyr .45s 3.85s both;box-shadow:0 12px 28px -8px rgba(0,104,255,.55)}
+#introCta.fx,#listBtn.fx{animation:none;opacity:1;transform:scale(var(--bs,1));filter:brightness(var(--bk,1));box-shadow:0 calc(12px*var(--bsh,1)) calc(28px*var(--bsh,1)) -8px rgba(0,104,255,.55)}
+.cta .rip{position:absolute;left:var(--rx,50%);top:var(--ry,50%);width:20px;height:20px;margin:-10px 0 0 -10px;border-radius:50%;pointer-events:none;background:rgba(255,255,255,.55);opacity:var(--ro,0);transform:scale(var(--rs,0))}
+#ptr0{position:absolute;left:0;top:0;width:26px;height:26px;margin:-13px 0 0 -13px;border-radius:50%;z-index:9;pointer-events:none;background:rgba(0,74,200,.26);border:2px solid rgba(255,255,255,.95);box-shadow:0 0 0 1.5px rgba(0,74,200,.45),0 3px 12px rgba(20,35,80,.4);opacity:var(--po,0);transform:translate(var(--px,0),var(--py,0)) scale(var(--pz,1))}
 /* 1. cold open: copy only (lines lifted from the landing intro paragraph) */
-#v5open{position:absolute!important;left:44px;top:112px;width:440px;z-index:2;color:#fff}
+#v5open{position:absolute!important;left:44px;top:84px;width:440px;z-index:2;color:#fff}
 #v5open .a{font-size:21px;line-height:34px;font-weight:400;letter-spacing:.005em;color:rgba(255,255,255,.94);text-shadow:0 1px 14px rgba(6,12,34,.55)}
-#v5open .b{margin-top:22px;font-size:34px;line-height:46px;font-weight:700;letter-spacing:.005em;color:#FFF8E4;text-shadow:0 2px 24px rgba(6,12,34,.5)}
+#v5open .a{animation:dimA .7s 2.7s both}
+@keyframes dimA{to{opacity:.6}}
+#v5open .q{margin-top:20px;font-size:19px;line-height:30px;font-weight:500;color:rgba(255,255,255,.96);text-shadow:0 1px 14px rgba(6,12,34,.55)}
+#v5open .b{margin-top:18px;font-size:28px;line-height:42px;font-weight:700;letter-spacing:.005em;color:#FFF8E4;text-shadow:0 2px 24px rgba(6,12,34,.5)}
 #v5open .ln{animation-duration:.6s}
 
 /* input: ages flash -> guess beat */
@@ -64,12 +74,11 @@ html{overflow:hidden;background:#101a33}body{overflow:hidden;background:transpar
 #s-input.g .guess .sg{animation:lyr .45s both;animation-delay:calc(.7s + var(--i)*.06s)}
 #ptr{position:absolute;left:0;top:0;width:26px;height:26px;margin:-13px 0 0 -13px;border-radius:50%;z-index:9;pointer-events:none;background:rgba(0,74,200,.26);border:2px solid rgba(255,255,255,.95);box-shadow:0 0 0 1.5px rgba(0,74,200,.45),0 3px 12px rgba(20,35,80,.4);opacity:var(--po,0);transform:translate(var(--px,0),var(--py,0)) scale(var(--pz,1))}
 
-/* bridge: breath -> hit */
+/* bridge: breath -> the 16 simply appears (v6: no flash, no slam, no punch - stillness) */
 .bridge .bvid{object-position:50% var(--vy,17%);filter:brightness(var(--vb,.86)) saturate(.8) blur(var(--vblur,0px));transform:scale(1.04)}
 .bridge video{display:none}
 .bridge::after{display:none}
 #bscrim{position:absolute;inset:0;z-index:1;pointer-events:none;opacity:var(--sc,0);background:radial-gradient(48% 66% at 50% var(--scy,42%),rgba(8,14,34,.5) 0,rgba(8,14,34,.36) 42%,rgba(8,14,34,.12) 78%,rgba(8,14,34,0) 100%)}
-#v4flash{position:absolute;inset:0;z-index:1;pointer-events:none;opacity:var(--fl,0);background:radial-gradient(34% 46% at 50% 36%,rgba(255,255,255,.85) 0,rgba(210,225,255,.4) 40%,rgba(210,225,255,0) 100%)}
 .b-copy{position:absolute;left:200px;top:0;width:400px;padding:52px 0 0;text-align:center}
 .b-num,.b-dots{justify-content:center}
 .b-num{padding-left:30px;height:124px!important;margin-top:10px}
@@ -81,18 +90,20 @@ html{overflow:hidden;background:#101a33}body{overflow:hidden;background:transpar
 .b-lbl{font-size:27px;line-height:36px;margin-top:14px}
 .b-sub{font-size:18px;line-height:26px;margin-top:8px}
 .bridge .b1,.bridge .b-lbl,.bridge .b-sub{opacity:0!important;transform:translateY(9px);filter:blur(5px);transition:opacity .35s ease,transform .35s ease,filter .35s ease}
-.bridge.r-b1 .b1,.bridge.r-lbl .b-lbl,.bridge.r-sub .b-sub{opacity:1!important;transform:none;filter:blur(0);transition:opacity .5s cubic-bezier(.2,.6,.2,1),transform .5s cubic-bezier(.2,.6,.2,1),filter .5s cubic-bezier(.2,.6,.2,1)}
-.bridge .b-num{opacity:0!important;transform:scale(1.7);filter:blur(16px)}
-.bridge.r-num .b-num{opacity:1!important;transform:none;filter:blur(0);transition:opacity .3s ease-out,transform .6s cubic-bezier(.16,1,.3,1),filter .5s ease-out}
+.bridge.r-b1 .b1,.bridge.r-lbl .b-lbl,.bridge.r-sub .b-sub{opacity:1!important;transform:none;filter:blur(0);transition:opacity .9s ease,transform .9s ease,filter .9s ease}
+.bridge .b-num{opacity:var(--n16o,0)!important;transform:none;filter:blur(var(--n16b,0px))}
 #v3guess{display:none}
+#v6msg{position:absolute;left:0;right:0;font-size:20px;line-height:29px;font-weight:600;color:#fff;text-shadow:0 1px 14px rgba(6,12,34,.6);opacity:0;transform:translateY(6px);filter:blur(4px);transition:opacity .9s ease,transform .9s ease,filter .9s ease}
+.bridge.r-msg #v6msg{opacity:1;transform:none;filter:blur(0)}
+.bridge.v3-fact #v6msg{display:none}
 #v3dots{display:flex;justify-content:center;gap:9px;margin-top:16px;height:7px}
-#v3dots i{width:7px;height:7px;border-radius:50%;background:#fff;box-shadow:0 0 9px rgba(255,255,255,.8);opacity:0;scale:.2;transition:opacity .28s ease,scale .28s cubic-bezier(.2,.6,.2,1)}
-#v3dots i.on{opacity:.95;scale:1}
+#v3dots i{width:5px;height:5px;margin-top:1px;border-radius:50%;background:#fff;opacity:0;transition:opacity .6s ease}
+#v3dots i.on{opacity:.62}
 .bridge.final .b-fin{position:absolute;animation:none}
 .bridge.final .b-msg{display:none!important}
 .bridge.final .b-fact,.bridge.final .b-cta,.bridge.final .b-cta-sub{display:none!important}
 .bridge.v3-fact .b1,.bridge.v3-fact .b-num,.bridge.v3-fact .b-lbl,.bridge.v3-fact .b-sub,.bridge.v3-fact #v3dots{display:none!important}
-/* 4. the 2.2 hit: same sentence + citation as the landing fact card, number as the hero. Motion is driven per frame from render_v5.js */
+/* 4. the 2.2 (v6: settles in rather than slams; two soft heartbeats; then rests): same sentence + citation as the landing fact card, number as the hero. Motion is driven per frame from render_v6.js */
 #v5fact{position:absolute;inset:0;z-index:3;display:none;color:#fff;text-align:center}
 .bridge.v3-fact #v5fact{display:block}
 #v5fact .row{position:absolute;left:24px;right:24px;top:96px;display:flex;align-items:baseline;justify-content:center;gap:12px;white-space:nowrap}
@@ -120,8 +131,6 @@ html{overflow:hidden;background:#101a33}body{overflow:hidden;background:transpar
 .step[data-step="5"] .ai,.step[data-step="5"] .form,.step[data-step="5"] .spacer{display:none}
 #listBtn{position:absolute;left:44px;bottom:38px;width:300px;margin:0;z-index:2;overflow:hidden;animation:lyr .5s .95s both;box-shadow:0 12px 28px -8px rgba(0,104,255,.55)}
 /* CTA press (visual only - the real button is never clicked, the form is never touched) */
-#listBtn.fx{animation:none;opacity:1;transform:scale(var(--bs,1));filter:brightness(var(--bk,1));box-shadow:0 calc(12px*var(--bsh,1)) calc(28px*var(--bsh,1)) -8px rgba(0,104,255,.55)}
-#listBtn .rip{position:absolute;left:var(--rx,50%);top:var(--ry,50%);width:20px;height:20px;margin:-10px 0 0 -10px;border-radius:50%;pointer-events:none;background:rgba(255,255,255,.55);opacity:var(--ro,0);transform:scale(var(--rs,0))}
 #ring{position:absolute;left:0;top:0;width:60px;height:60px;margin:-30px 0 0 -30px;border-radius:50%;z-index:8;pointer-events:none;border:1.5px solid rgba(255,255,255,.9);box-shadow:0 0 18px rgba(255,255,255,.5);opacity:var(--go,0);transform:translate(var(--px,0),var(--py,0)) scale(var(--gs,0))}
 #ptr2{position:absolute;left:0;top:0;width:26px;height:26px;margin:-13px 0 0 -13px;border-radius:50%;z-index:9;pointer-events:none;background:rgba(0,74,200,.26);border:2px solid rgba(255,255,255,.95);box-shadow:0 0 0 1.5px rgba(0,74,200,.45),0 3px 12px rgba(20,35,80,.4);opacity:var(--po,0);transform:translate(var(--px,0),var(--py,0)) scale(var(--pz,1))}
 

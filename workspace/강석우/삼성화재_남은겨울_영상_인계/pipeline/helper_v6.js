@@ -1,6 +1,6 @@
-// helper_v5.js - injected into the landing page by build_v5.py. Adds only what the film needs; copy is read from the landing DOM, never retyped here.
+// helper_v6.js - injected into the landing page by build_v6.py. Adds only what the film needs; copy is read from the landing DOM, never retyped here.
 window.__anims=new Map();
-// frame-exact clock for CSS animations: render_v5.js calls __tick(1000/30) once per frame
+// frame-exact clock for CSS animations: render_v6.js calls __tick(1000/30) once per frame
 window.__tick=function(dt){
   for(const a of document.getAnimations()){
     let t=__anims.get(a); if(t===undefined){a.pause();t=0}
@@ -14,27 +14,35 @@ window.__vf=async function(n){const im=document.getElementById('bFrame');const s
 window.__lines=function(el,sep){const parts=el.innerHTML.split(sep||/<br\s*\/?>/i);el.innerHTML=parts.map((p,i)=>`<span class="ln" style="--i:${i}">${p}</span>`).join('')};
 (function(){
   const q=s=>document.querySelector(s), mk=(tag,id,parent,before,cls)=>{const e=document.createElement(tag);if(id)e.id=id;if(cls)e.className=cls;parent.insertBefore(e,before||null);return e};
-  const need=(c,m)=>{if(!c)throw new Error('helper_v5: '+m)};
+  const need=(c,m)=>{if(!c)throw new Error('helper_v6: '+m)};
 
-  // 1. COLD OPEN - lines 1, 2 and 4 of the landing intro paragraph (h1.st-b). No title.
+  // 1. COLD OPEN - belief, left hanging: lines 1-3 of the landing intro paragraph (h1.st-b), then the landing's own question (p.st-q).
+  //    Line 4 (the conclusion) is NOT shown here; the conclusion comes only once, after the 16.
   const intro=q('#s-intro'); const L=q('.st-b').innerHTML.split(/<br\s*\/?>/i); need(L.length===4,'intro paragraph should have 4 lines');
+  const Q=q('.st-q').innerHTML.split(/<br\s*\/?>/i); need(Q.length===2,'intro question should have 2 lines');
   mk('div',null,intro,intro.firstChild,'v4scrim'); mk('div',null,intro,intro.firstChild,'v4bg');
-  const cut='시간은 '; need(L[3].includes(cut),'line 4 wording changed');
-  const b=L[3].split(cut); const o=mk('div','v5open',intro);
+  const o=mk('div','v5open',intro);
   o.innerHTML=`<div class="a"><span class="ln" style="--d:.2s">${L[0]}</span><span class="ln" style="--d:.65s">${L[1]}</span></div>`+
-              `<div class="b"><span class="ln" style="--d:1.8s">${b[0]+cut.trim()}</span><span class="ln" style="--d:2.0s">${b[1]}</span></div>`;
+              `<div class="b"><span class="ln" style="--d:1.6s">${L[2]}</span></div>`+
+              `<div class="q"><span class="ln" style="--d:2.75s">${Q[0]}</span><span class="ln" style="--d:2.95s">${Q[1]}</span></div>`;
+
+  // 1b. INTRO CTA - the landing's own button under the copy; pointer + press effect (the film then really clicks it to go to the ages)
+  const cta0=q('#s-intro .st-foot .cta'); cta0.id='introCta'; mk('span',null,cta0,null,'rip'); mk('div','ptr0',intro);
 
   // 2. QUESTION
   const cap=q('.guess .caption'); cap.innerHTML=cap.innerHTML.replace(', ',',<br>'); __lines(cap);
   document.querySelectorAll('#guess .sg').forEach((b,i)=>b.style.setProperty('--i',i));
   const inp=q('#s-input'); mk('div',null,inp,inp.firstChild,'v4scrim'); mk('div',null,inp,inp.firstChild,'v4bg'); mk('div','ptr',inp);
 
-  // 3. BRIDGE (16 hit)
-  const br=q('#s-bridge'); mk('div','bscrim',br,q('.b-copy')); mk('div','v4flash',br,q('.b-copy'));
+  // 3. BRIDGE (the 16)
+  const br=q('#s-bridge'); mk('div','bscrim',br,q('.b-copy'));
   const d=mk('div','v3dots',q('.b-copy'),q('#bLbl'));
+  // the conclusion (the landing's bridge message, p.b-msg) - shown once, after the 16 has sat quietly; it takes the place of the sub line
+  const msg=mk('div','v6msg',q('.b-copy')); msg.innerHTML=q('.b-msg').innerHTML;
+  window.__msgTop=function(){msg.style.top=q('#bSub').offsetTop+'px'};
   window.__dots=function(n){d.innerHTML='';for(let i=0;i<n;i++)d.appendChild(document.createElement('i'))};
 
-  // 4. THE 2.2 HIT - rebuilt from the landing fact card (.b-fact): same sentence, same citation, number pulled out as the hero
+  // 4. THE 2.2 - rebuilt from the landing fact card (.b-fact): same sentence, same citation, number pulled out as the hero
   const fb=q('.b-fact b').innerHTML.split(/<br\s*\/?>/i).map(h=>{const t=document.createElement('i');t.innerHTML=h;return t.textContent.trim()});
   const hero='2.2개'; need(fb.length===2&&fb[0].split(hero).length===2,'fact sentence changed');
   const [pre,post]=fb[0].split(hero);
