@@ -1,0 +1,26 @@
+# 보안 — 절대 커밋 금지
+.env*
+*.pem
+credentials*.json
+secrets*
+keys/*.key
+
+# 대용량·바이너리 (필요하면 링크/경로로)
+*.pptx
+*.key
+*.mp4
+*.zip
+*.psd
+*.ai
+
+# OS·에디터
+.DS_Store
+Thumbs.db
+*~
+
+# Claude 로컬 설정
+.claude/settings.local.json
+
+# 파이썬 캐시
+__pycache__/
+*.pyc
