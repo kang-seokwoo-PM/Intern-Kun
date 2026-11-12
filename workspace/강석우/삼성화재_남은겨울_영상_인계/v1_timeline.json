@@ -1,0 +1,579 @@
+{
+  "title": "삼성화재 다이렉트 — 남은 겨울 16:9 영상",
+  "version": "v5 (저장소 파일명 v4_)",
+  "file": "workspace/강석우/v4_삼성화재_남은겨울_16x9.mp4",
+  "fps": 30,
+  "resolution": {
+    "width": 1920,
+    "height": 1080
+  },
+  "total_duration": 30.73,
+  "total_frames": 922,
+  "video": "H.264 High, yuv420p, +faststart, crf 18",
+  "audio": "AAC 192k, 48kHz stereo, 약 -16.8 LUFS (ffmpeg 측정)",
+  "units": "시간은 영상 기준 초. copy의 source.line은 랜딩 v8 HTML의 줄 번호, selector는 그 요소. \" / \"는 화면에서의 줄바꿈",
+  "source_html": "랜딩 v8 HTML (저장소에 없음 — 받아야 할 것)",
+  "overlays": [
+    {
+      "id": "snow",
+      "description": "영상 전체에 한 번에 이어지는 눈(프레임 0부터, 장면이 바뀌어도 끊기지 않음). 230송이, 화면 합성(screen) 95%",
+      "made_by": "pipeline/snow_v5.py"
+    }
+  ],
+  "scene_files": {
+    "note": "render_v5.js는 5개 장면으로 찍고 assemble_v5.py가 겹쳐 잇는다. 아래 cuts는 보는 사람 기준으로 8개로 나눈 것",
+    "scenes": [
+      {
+        "name": "1_intro",
+        "start": 0.0
+      },
+      {
+        "name": "2_input",
+        "start": 4.7
+      },
+      {
+        "name": "3_bridge",
+        "start": 12.4
+      },
+      {
+        "name": "4_fact",
+        "start": 19.0
+      },
+      {
+        "name": "5_closing",
+        "start": 23.3
+      }
+    ],
+    "crossfades": [
+      0.3,
+      0.4,
+      0.4,
+      0.5
+    ],
+    "final_fade": 0.6
+  },
+  "marks": {
+    "ages": 4.7,
+    "question": 6.75,
+    "guess_pick": 11.8,
+    "breath0": 12.6,
+    "reveal": 13.65,
+    "land": 14.4,
+    "fact": 19.1,
+    "fact_hit": 19.72,
+    "pulse1": 21.34,
+    "pulse2": 21.68,
+    "closing": 23.4,
+    "press": 26.4,
+    "release": 26.62,
+    "endcard": 26.74,
+    "logo": 27.82,
+    "fade_out": 29.133
+  },
+  "cuts": [
+    {
+      "id": "01_cold_open",
+      "start": 0.0,
+      "end": 4.7,
+      "purpose": "제목 없이 글로 시작. 영상의 주제(함께할 시간은 많지 않다)를 먼저 던진다",
+      "copy": [
+        {
+          "text": "짜증을 내도, 투정을 부려도",
+          "source": {
+            "line": 268,
+            "selector": "h1.st-b (1번째 줄)"
+          }
+        },
+        {
+          "text": "늘 다 받아 주시던 우리 부모님.",
+          "source": {
+            "line": 268,
+            "selector": "h1.st-b (2번째 줄)"
+          }
+        },
+        {
+          "text": "함께할 수 있는 시간은 / 생각보다 많지 않아요.",
+          "source": {
+            "line": 268,
+            "selector": "h1.st-b (4번째 줄)"
+          },
+          "note": "화면 폭에 맞춰 \"시간은\" 뒤에서 줄바꿈. 3번째 줄은 쓰지 않음"
+        },
+        {
+          "text": "삼성화재 다이렉트",
+          "source": {
+            "line": 265,
+            "selector": "#s-intro .bar .brand"
+          },
+          "note": "화면 왼쪽 위 작은 글자"
+        },
+        {
+          "text": "남은 겨울 계산기",
+          "source": {
+            "line": 265,
+            "selector": "#s-intro .bar .meta"
+          },
+          "note": "화면 오른쪽 위 작은 글자"
+        }
+      ],
+      "background_asset": "intro_illustration",
+      "camera": "두 사람 쪽으로 아주 천천히 다가감 (장면 01–03에 걸쳐 1.60배 → 1.736배, 한 번에 이어짐). 배경은 살짝 흐리고 어둡게",
+      "text_motion": "한 줄씩 0.6초 동안 떠오름(흐림 → 또렷, 9px 위로). 시작 시점 0.2 / 0.65 / 1.8 / 2.0초",
+      "transition_in": "없음 (첫 장부터 눈이 내리는 화면, 검은 화면에서 밝아지지 않음)",
+      "transition_out": "0.3초 겹쳐 넘기기",
+      "audio_cue": "피아노 A단조 시작 (0.04초부터)"
+    },
+    {
+      "id": "02_ages",
+      "start": 4.7,
+      "end": 6.75,
+      "purpose": "계산기에 나이를 넣는 모습",
+      "copy": [
+        {
+          "text": "내 나이",
+          "source": {
+            "line": 282,
+            "selector": "label[for=me]"
+          }
+        },
+        {
+          "text": "48",
+          "source": {
+            "line": 422,
+            "selector": "input#me"
+          },
+          "note": "영상에서 입력한 값. 랜딩 기본값과 같음(422줄 S 초기값: me 48, mom 74)"
+        },
+        {
+          "text": "어머니 나이",
+          "source": {
+            "line": 285,
+            "selector": "label[for=mom]"
+          }
+        },
+        {
+          "text": "74",
+          "source": {
+            "line": 422,
+            "selector": "input#mom"
+          },
+          "note": "영상에서 입력한 값. 랜딩 기본값과 같음(422줄 S 초기값: me 48, mom 74)"
+        },
+        {
+          "text": "세",
+          "source": {
+            "line": null,
+            "selector": ".inp span"
+          },
+          "note": "입력칸 단위"
+        },
+        {
+          "text": "삼성화재 다이렉트",
+          "source": {
+            "line": 265,
+            "selector": "#s-intro .bar .brand"
+          },
+          "note": "화면 왼쪽 위 작은 글자"
+        },
+        {
+          "text": "남은 겨울 계산기",
+          "source": {
+            "line": 265,
+            "selector": "#s-intro .bar .meta"
+          },
+          "note": "화면 오른쪽 위 작은 글자"
+        }
+      ],
+      "background_asset": "intro_illustration",
+      "camera": "장면 01에서 이어지는 느린 다가감",
+      "text_motion": "흰 카드가 0.45초 동안 떠오름. 숫자는 한 글자씩 입력됨 (4→48: 0.40/0.52초, 7→74: 0.85/0.97초)",
+      "transition_in": "0.3초 겹쳐 넘기기",
+      "transition_out": "카드가 0.32초 동안 위로 사라지며 질문으로 바뀜 (같은 장면 안)",
+      "audio_cue": "피아노 이어짐"
+    },
+    {
+      "id": "03_question",
+      "start": 6.75,
+      "end": 12.4,
+      "purpose": "보는 사람도 스스로 답을 떠올리게 하는 질문. 망설임을 보여 줌",
+      "copy": [
+        {
+          "text": "먼저 맞혀 보세요",
+          "source": {
+            "line": 294,
+            "selector": ".guess .fl"
+          }
+        },
+        {
+          "text": "부모님과 함께할 시간, / 몇 년쯤 남았을까요?",
+          "source": {
+            "line": 295,
+            "selector": ".guess p.caption"
+          },
+          "note": "쉼표 뒤에서 줄바꿈"
+        },
+        {
+          "text": "5년쯤",
+          "source": {
+            "line": 297,
+            "selector": "#guess .sg[data-v=5]"
+          }
+        },
+        {
+          "text": "10년쯤",
+          "source": {
+            "line": 298,
+            "selector": "#guess .sg[data-v=10]"
+          }
+        },
+        {
+          "text": "20년쯤",
+          "source": {
+            "line": 299,
+            "selector": "#guess .sg[data-v=20]"
+          },
+          "note": "선택됨 (11.80초)"
+        },
+        {
+          "text": "30년 넘게",
+          "source": {
+            "line": 300,
+            "selector": "#guess .sg[data-v=30]"
+          }
+        },
+        {
+          "text": "세어 보기",
+          "source": {
+            "line": 306,
+            "selector": "#countBtn"
+          }
+        },
+        {
+          "text": "삼성화재 다이렉트",
+          "source": {
+            "line": 265,
+            "selector": "#s-intro .bar .brand"
+          },
+          "note": "화면 왼쪽 위 작은 글자"
+        },
+        {
+          "text": "남은 겨울 계산기",
+          "source": {
+            "line": 265,
+            "selector": "#s-intro .bar .meta"
+          },
+          "note": "화면 오른쪽 위 작은 글자"
+        }
+      ],
+      "background_asset": "intro_illustration",
+      "camera": "장면 01에서 이어지는 느린 다가감",
+      "text_motion": "질문이 한 줄씩 떠오르고 선택지 4개가 차례로 나옴. 포인터가 10년쯤에서 멈칫 → 30년 넘게를 누를 뻔 → 물러남 → 20년쯤 선택. 끝에 \"세어 보기\" 버튼이 눌린 모습",
+      "transition_in": "같은 장면 안에서 바뀜",
+      "transition_out": "0.4초 겹쳐 넘기기",
+      "audio_cue": "피아노 이어짐, 끝에서 풀리지 않은 채로 멈춤"
+    },
+    {
+      "id": "04_breath",
+      "start": 12.4,
+      "end": 13.65,
+      "purpose": "답이 나오기 직전의 조용한 숨 고르기",
+      "copy": [],
+      "background_asset": "bridge_video",
+      "camera": "고정. 영상을 어둡게(밝기 0.5)",
+      "text_motion": "글자 없음. 눈만 내림",
+      "transition_in": "0.4초 겹쳐 넘기기",
+      "transition_out": "그대로 이어짐",
+      "audio_cue": "거의 무음 (12.6초부터 음악이 가라앉음)"
+    },
+    {
+      "id": "05_hit_16",
+      "start": 13.65,
+      "end": 19.0,
+      "purpose": "영상에서 가장 센 순간. 남은 겨울 16번",
+      "copy": [
+        {
+          "text": "남은 겨울을 세어 봤어요",
+          "source": {
+            "line": 314,
+            "selector": "p.b1"
+          }
+        },
+        {
+          "text": "16",
+          "source": {
+            "line": 315,
+            "selector": "#bNum"
+          },
+          "note": "랜딩 계산식의 결과(어머니 74세). 근거 값은 404–409줄 LE 표 [확인 필요]"
+        },
+        {
+          "text": "번",
+          "source": {
+            "line": 315,
+            "selector": ".b-num .u"
+          }
+        },
+        {
+          "text": "어머니와 함께 보낼 겨울",
+          "source": {
+            "line": 558,
+            "selector": "#bLbl"
+          },
+          "note": "랜딩 코드가 만드는 문장: `${m.who}와 함께 보낼 겨울`"
+        },
+        {
+          "text": "생각하신 것보다 조금 짧은 약 16년이에요",
+          "source": {
+            "line": 556,
+            "selector": "#bSub"
+          },
+          "note": "랜딩 코드가 만드는 문장(20년쯤을 골랐을 때)"
+        }
+      ],
+      "background_asset": "bridge_video",
+      "camera": "숫자가 놓인 뒤 아주 천천히 다가감(1.0 → 약 1.09배). 배경은 조금 밝아지고 흐려짐",
+      "text_motion": "머리말이 먼저 뜸 → 16이 1.7배·흐림에서 0.6초 만에 제자리에 놓임(14.40초) + 번쩍임 → 점 16개가 0.05초 간격으로 켜짐 → 아랫줄 두 개가 차례로 뜸",
+      "transition_in": "숨 고르기에서 그대로 이어짐",
+      "transition_out": "0.4초 겹쳐 넘기기",
+      "audio_cue": "14.40초: 큰 F 화음(영상 전체에서 가장 큰 소리). 이어서 답하는 가락"
+    },
+    {
+      "id": "06_hit_2.2",
+      "start": 19.0,
+      "end": 23.3,
+      "purpose": "두 번째로 센 순간. 부모님 건강 사실 한 가지",
+      "copy": [
+        {
+          "text": "65세 이상 부모님들은 평균",
+          "source": {
+            "line": 320,
+            "selector": ".b-fact b"
+          },
+          "note": "한 문장을 숫자 앞뒤로 나눠 한 줄에 배치"
+        },
+        {
+          "text": "2.2개",
+          "source": {
+            "line": 320,
+            "selector": ".b-fact b"
+          },
+          "note": "주인공. 아주 크게 [확인 필요: 원자료 대조]"
+        },
+        {
+          "text": "의 만성질환을 갖고 계세요.",
+          "source": {
+            "line": 320,
+            "selector": ".b-fact b"
+          }
+        },
+        {
+          "text": "3개 이상인 분도 3명 중 1명이 넘어요.",
+          "source": {
+            "line": 320,
+            "selector": ".b-fact b (br 뒤)"
+          },
+          "note": "[확인 필요: 원자료 대조]"
+        },
+        {
+          "text": "보건복지부·한국보건사회연구원, 2023 노인실태조사",
+          "source": {
+            "line": 320,
+            "selector": ".b-fact small"
+          },
+          "note": "출처 표기"
+        }
+      ],
+      "background_asset": "bridge_video",
+      "camera": "고정(밝기 0.66, 살짝 흐림). 심장 박동 뒤에는 완전히 멈춤",
+      "text_motion": "2.2개가 2.5배·흐림에서 0.26초 만에 떨어져 19.72초에 놓임 + 아주 작은 흔들림(약 3px, 0.3초) → 앞뒤 문장 → 둘째 문장 → 출처가 차례로 뜸 → 심장 박동 두 번: 21.34초(7.5% 커짐), 21.68초(6% 커짐) → 멈춤",
+      "transition_in": "0.4초 겹쳐 넘기기",
+      "transition_out": "0.5초 겹쳐 넘기기",
+      "audio_cue": "19.72초: 낮은 A 화음 강세(16번보다 작게). 21.34초·21.68초: 낮은 심장 소리 두 번(쿵-쿵), 그때 음악이 살짝 작아짐"
+    },
+    {
+      "id": "07_closing_cta",
+      "start": 23.3,
+      "end": 26.74,
+      "purpose": "따뜻한 마무리와 행동 권유. 버튼을 누르는 모습",
+      "copy": [
+        {
+          "text": "지금부터 알아 가면 돼요. / 건강보험부터 / 함께 점검해 봐요.",
+          "source": {
+            "line": 495,
+            "selector": "#closeHead"
+          },
+          "note": "랜딩 코드가 넣는 문장(372줄에도 같은 기본 문장)"
+        },
+        {
+          "text": "내 건강보험 점검 신청하기",
+          "source": {
+            "line": 397,
+            "selector": "#listBtn"
+          }
+        },
+        {
+          "text": "삼성화재 다이렉트",
+          "source": {
+            "line": 335,
+            "selector": "#s-check .hd-brand"
+          },
+          "note": "화면 왼쪽 위 작은 글자"
+        }
+      ],
+      "background_asset": "closing_illustration",
+      "camera": "아주 천천히 다가감(1.0 → 약 1.03배). 따뜻한 빛이 점점 짙어짐",
+      "text_motion": "제목 세 줄이 한 줄씩 떠오름 → 버튼이 뜸 → 포인터가 버튼 오른쪽으로 미끄러져 옴 → 26.40초에 누름(버튼 0.96배, 20% 어둡게, 물결이 퍼짐) → 26.62초에 뗌",
+      "transition_in": "0.5초 겹쳐 넘기기",
+      "transition_out": "버튼을 뗀 직후(26.74초) 0.7초 동안 로고 장면으로 겹쳐 넘어감",
+      "audio_cue": "C장조로 밝아짐. 누르는 소리는 없음",
+      "note": "버튼은 누르는 모습만 그린 것. 실제 클릭·신청서 입력·제출은 하지 않음"
+    },
+    {
+      "id": "08_endcard_logo",
+      "start": 26.74,
+      "end": 30.73,
+      "purpose": "행사 로고로 끝맺음",
+      "copy": [
+        {
+          "text": "우리가 함께할 겨울",
+          "source": {
+            "line": null,
+            "selector": "assets/event_logo.png"
+          },
+          "note": "로고 그림 파일(지금은 임시 글자). 랜딩 글자가 아니라 인트로 그림(207줄) 안에 그려진 제목을 옮긴 것"
+        },
+        {
+          "text": "삼성화재 다이렉트",
+          "source": {
+            "line": 265,
+            "selector": "#s-intro .bar .brand"
+          },
+          "note": "로고 아래 작은 글자. 공식 CI 그림 아님 [확인 필요]"
+        }
+      ],
+      "background_asset": "closing_illustration",
+      "camera": "불 켜진 나무를 비춤. 아주 천천히 다가감(1.0 → 1.035배)",
+      "text_motion": "로고가 0.7초 동안 떠오름(27.82초에 다 나옴) → 브랜드 글자가 뒤따라 뜸 → 약 2.3초 그대로 → 마지막 0.6초 동안 화면이 어두워짐",
+      "transition_in": "버튼을 뗀 직후 0.7초 겹쳐 넘기기",
+      "transition_out": "0.6초 동안 검게 사라짐",
+      "audio_cue": "27.82초: 마지막 C 화음이 로고와 함께 울림. 29.13초부터 소리가 작아짐"
+    }
+  ],
+  "assets": {
+    "intro_illustration": {
+      "path": "pipeline/assets/hires/intro.png (또는 .jpg) — 없으면 랜딩 HTML 207줄의 그림을 꺼내 씀",
+      "current_resolution": "474x843",
+      "recommended_resolution": "2000x3557 이상 (가로 2000px 이상, 같은 비율)",
+      "replaceable": true,
+      "used_in": [
+        "01_cold_open",
+        "02_ages",
+        "03_question"
+      ]
+    },
+    "closing_illustration": {
+      "path": "pipeline/assets/hires/closing.png (또는 .jpg) — 없으면 랜딩 HTML 246줄의 그림을 꺼내 씀",
+      "current_resolution": "800x1235",
+      "recommended_resolution": "2000x3088 이상 (가로 2000px 이상, 같은 비율)",
+      "replaceable": true,
+      "used_in": [
+        "07_closing_cta",
+        "08_endcard_logo"
+      ]
+    },
+    "bridge_video": {
+      "path": "pipeline/assets/hires/bridge.mp4 — 없으면 랜딩 HTML 640줄의 영상을 꺼내 씀",
+      "current_resolution": "720x1280, 30fps, 11.03초(331프레임)",
+      "recommended_resolution": "1920px 이상 가로, 세로형, 30fps, 11초 이상",
+      "replaceable": true,
+      "used_in": [
+        "04_breath",
+        "05_hit_16",
+        "06_hit_2.2"
+      ]
+    },
+    "event_logo": {
+      "path": "pipeline/assets/event_logo.png",
+      "current_resolution": "1942x426 (임시: Pretendard 글자, 투명 PNG)",
+      "recommended_resolution": "가로 2400px 이상 또는 세로 1000px 이상, 투명 PNG",
+      "replaceable": true,
+      "used_in": [
+        "08_endcard_logo"
+      ],
+      "display_box_px": "최대 1152x456 (영상 픽셀), 비율 유지"
+    },
+    "music": {
+      "path": "pipeline/out/audio/music_bed.wav (music_v5.py가 만듦, 저장소에 없음)",
+      "current_resolution": "코드로 만든 피아노, 48kHz 스테레오",
+      "recommended_resolution": "진짜 음원 wav/mp3, 31초 이상, 사용 허락 확인",
+      "replaceable": true,
+      "how": "python3 assemble_v5.py --music 파일"
+    },
+    "heartbeat_sfx": {
+      "path": "pipeline/out/audio/heartbeat_sfx.wav (music_v5.py가 만듦, 저장소에 없음)",
+      "current_resolution": "코드로 만든 낮은 소리 2번, 48kHz",
+      "recommended_resolution": "그대로 써도 됨",
+      "replaceable": true,
+      "used_in": [
+        "06_hit_2.2"
+      ]
+    },
+    "font": {
+      "path": "pipeline/fonts/Pretendard-*.woff2 (get_fonts.sh가 받음, 저장소에 없음)",
+      "current_resolution": "Pretendard 1.3.9, 굵기 300–900",
+      "recommended_resolution": "그대로",
+      "replaceable": false,
+      "license": "SIL OFL 1.1"
+    },
+    "landing_html": {
+      "path": "저장소에 없음 (rules/03) — 팀장에게 받아 스크립트에 경로로 넘김",
+      "current_resolution": "v8, 약 3.1MB",
+      "recommended_resolution": "그대로",
+      "replaceable": false
+    }
+  },
+  "todo": [
+    {
+      "order": 1,
+      "task": "큰 원본 그림(첫 장면·마무리)과 배경 영상으로 교체",
+      "how": "pipeline/assets/hires/ 에 넣고 run_all.sh 다시 실행",
+      "status": "대기 — 원본을 받아야 함"
+    },
+    {
+      "order": 2,
+      "task": "진짜 행사 로고로 교체",
+      "how": "pipeline/assets/event_logo.png 덮어쓰기 후 다시 실행",
+      "status": "대기 — 로고를 받아야 함"
+    },
+    {
+      "order": 3,
+      "task": "코드로 만든 음악을 진짜 음원으로 교체",
+      "how": "python3 assemble_v5.py --music 파일",
+      "status": "대기 — 음원을 받아야 함. 지금 음악은 사람 귀로 들어 본 적 없음"
+    },
+    {
+      "order": 4,
+      "task": "[확인 필요] \"평균 2.2개 만성질환 / 3개 이상 3명 중 1명\" 을 2023 노인실태조사 원문과 대조",
+      "how": "보건복지부·한국보건사회연구원 보고서 확인",
+      "status": "미확인"
+    },
+    {
+      "order": 5,
+      "task": "[확인 필요] 16번의 근거인 생명표 값(랜딩 404–409줄)을 KOSIS 2024년 생명표와 대조. 80세 이상 값은 랜딩 주석상 추정값. 16번에 직접 쓰인 값은 65세·75세 여성 값(23.7, 14.9)",
+      "how": "KOSIS 생명표 확인 후 랜딩 수정 → 다시 실행",
+      "status": "미확인"
+    },
+    {
+      "order": 6,
+      "task": "[확인 필요] 마지막 장면의 \"삼성화재 다이렉트\"를 공식 CI 그림으로 바꿔야 하는지",
+      "how": "광고주 확인",
+      "status": "미확인"
+    },
+    {
+      "order": 7,
+      "task": "발표장 스피커로 소리(특히 심장 소리) 확인",
+      "how": "직접 듣기",
+      "status": "미확인"
+    }
+  ]
+}
