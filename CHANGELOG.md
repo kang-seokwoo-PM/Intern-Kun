@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 2026-11-12 (KST) — 모델 기본값
+
+- 저장소 기본 작업 모델을 Sonnet·중간 노력도로 지정 (.claude/settings.json, CLAUDE.md §2-1).
+
 ## 2026-11-12 (KST) — 초기 세팅
 - BIDDING 레포의 CLAUDE.md / AGENTS.md / rules / STATE / logs 구조를 참조해 인턴쿤 RULE 신설.
 - 가져온 것: AI 지침 문서 구조, 사실 원칙, vN 불변·1인 1파일·STATE 단독 소유, main 직접 push 금지, 기록 4층(축소).
