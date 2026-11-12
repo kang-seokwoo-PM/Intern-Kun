@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 2026-11-12 (KST) — 쉬운 말 원칙
+
+- 페르소나에 "초·중학생 눈높이로 쉽게 풀어서 답한다" 원칙 추가 (rules/00, CLAUDE.md §2).
+
 ## 2026-11-12 (KST) — 모델 기본값
 
 - 저장소 기본 작업 모델을 Sonnet·중간 노력도로 지정 (.claude/settings.json, CLAUDE.md §2-1).
