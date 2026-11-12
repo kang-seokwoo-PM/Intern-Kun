@@ -9,6 +9,7 @@
 - `CLAUDE.md`, `AGENTS.md`, `README.md`, `팀원_시작하기.md`, `rules/00~04`
 
 ## 다음 할 일
+0. [완료] 흩어진 작업 브랜치 통합(A안) — `claude/slack-session-lpkeio`를 정규(통합) 브랜치로 확정. `uvztl7`의 유일한 실제 로그(261112 세션연속성 문구문의)를 반입 완료. (2026-11-12)
 1. 팀장 검토 후 PR/병합 (병합 방식은 팀장 결정)
 2. `main` 브랜치 정리 `[확인 필요]` — 현재 origin/main은 README만 있는 별도 시작점(7b6f54c)이라 작업 브랜치와 공통 기록이 없어 PR이 안 만들어짐. 정리 방식은 팀장 결정 대기. main 보호 설정 가능 여부도 미확인.
 3. 팀원 온보딩 공지 (`팀원_시작하기.md` 기반)
@@ -17,3 +18,4 @@
 ## 알려진 제약
 - Slack 연동이 구 봇 방식이라 호출마다 새 세션이 생기고 안내 문구가 붙는다. 연동 교체는 워크스페이스 관리자 결정 사항.
 - 클사원은 Slack에 직접 게시·멘션할 수 없다.
+- Slack 호출마다 새 `slack-session-xxxx` 브랜치가 생겨 같은 작업물이 흩어진다. 정규 브랜치는 `claude/slack-session-lpkeio` 하나로 모은다. 중복 브랜치 `claude/slack-session-uvztl7`·`claude/slack-session-whk09u`는 통합으로 대체됨(superseded) — 삭제는 `[확인 필요]`, 팀장 확인 대기(임의로 삭제하지 않음).
